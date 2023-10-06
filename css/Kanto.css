@@ -1,6 +1,5 @@
 body {
     background-image: url('../assets/Images/Background_index.jpg');
-    /* Cambia 'background.jpg' por la imagen de fondo deseada */
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,7 +19,6 @@ h1 {
 header,
 footer {
     background-color: rgba(255, 165, 0, 0.5);
-    /* Naranja transparente */
     padding: 10px 0;
     text-align: center;
 }
@@ -49,12 +47,10 @@ main {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
-    max-width: 400px;
-    /* Ancho máximo para el contenedor */
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
-    /* Centra el contenedor horizontalmente */
     overflow: hidden;
-    /* Oculta el desbordamiento de la imagen */
 }
 
 #pokemon-image-container {
@@ -63,12 +59,9 @@ main {
 
 #pokemon-image {
     width: 200px;
-    /* Cambia el valor según el tamaño deseado */
     height: auto;
-    /* Mantiene la proporción original */
     filter: brightness(0%);
     max-width: 100%;
-    /* Ajusta el valor para oscurecer la imagen */
 }
 
 .revealed {
@@ -80,9 +73,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    /* Cambia el ancho según tu preferencia, por ejemplo, 80% */
     margin: 20px auto;
-    /* Centra el contenedor horizontalmente y agrega margen superior e inferior */
 }
 
 #options-list {
@@ -90,11 +81,8 @@ main {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* Divide en dos columnas iguales */
     grid-gap: 10px;
-    /* Espacio entre las opciones */
     width: 100%;
-    /* Expande el #options-list al 100% del contenedor */
 }
 
 #options-list li {
@@ -138,7 +126,6 @@ main {
     pointer-events: auto !important;
 }
 
-
 #response-message.out {
     opacity: 0;
     pointer-events: none;
@@ -146,7 +133,6 @@ main {
 
 #response-message-inline {
     display: none;
-    /* Ocultar el mensaje al principio */
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
@@ -158,7 +144,6 @@ main {
 
 #response-message-inline.show-message {
     display: block;
-    /* Mostrar el mensaje cuando tenga la clase 'show-message' */
     opacity: 1;
 }
 
@@ -166,15 +151,12 @@ main {
 .in {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
-    /* Esto controla la duración y el efecto de transición */
 }
 
 .out {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    /* Esto controla la duración y el efecto de transición */
     pointer-events: none;
-    /* Esto evita que se pueda hacer clic en el mensaje mientras está oculto */
 }
 
 @keyframes fadeOut {
