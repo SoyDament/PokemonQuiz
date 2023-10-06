@@ -168,3 +168,28 @@ main {
         opacity: 0;
     }
 }
+
+/* Agrega un estilo para reducir el espacio en blanco después del encabezado en dispositivos móviles */
+@media (max-width: 767px) {
+    header {
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajusta el contenedor principal para dispositivos móviles */
+@media (max-width: 767px) {
+    main {
+        padding: 20px;
+    }
+}
+
+/* Ajusta el contenedor del juego para dispositivos móviles */
+@media (max-width: 767px) {
+    #pokemon-container {
+        width: 100%;
+        max-width: 400px;
+        /* Mantén el ancho máximo deseado */
+        height: auto;
+        /* Ajusta la altura automáticamente según el contenido */
+    }
+}
