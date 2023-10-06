@@ -1,17 +1,21 @@
 body {
-    background-image: url('../assets/Images/Gengar.jfif');
+    background-image: url('../assets/Images/Background_index.jpg');
+    /* Cambia 'background.jpg' por la imagen de fondo deseada */
     background-color: #000;
+    /* Color de fondo en caso de que la imagen no se cargue */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    /* Evitar la barra de desplazamiento vertical */
 }
 
 header,
 footer {
     background-color: rgba(255, 165, 0, 0.5);
+    /* Naranja transparente */
     padding: 10px 0;
     text-align: center;
 }
@@ -35,42 +39,52 @@ main {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo negro transparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra */
 }
 
 #pokemon-image {
     width: 100%;
-    max-width: 400px;
-    /* Tamaño máximo para dispositivos móviles */
     height: auto;
+    max-width: 100%;
+    /* Tamaño máximo para el Pokémon */
+    filter: brightness(0%);
 }
 
 #options-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Centra las opciones */
+    flex-direction: row;
+    /* Cambia la dirección a horizontal */
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo negro transparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra */
     margin-top: 20px;
 }
 
 #options-list {
     display: flex;
-    flex-direction: column;
-    /* Cambia la dirección a vertical */
+    flex-wrap: wrap;
+    /* Para que las opciones se ajusten automáticamente */
     gap: 10px;
+    /* Espacio entre las opciones */
 }
 
 #options-list li {
     background-color: #FFA500;
+    /* Naranja */
     opacity: 0.8;
+    /* Transparencia */
     padding: 8px;
+    /* Reducir el padding para disminuir el tamaño */
     font-size: 18px;
+    /* Cambiar el tamaño de fuente según tu preferencia */
     list-style-type: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -84,6 +98,7 @@ main {
     text-align: center;
     padding: 10px;
     background-color: #007BFF;
+    /* Color para respuesta correcta */
     color: #fff;
     font-size: 18px;
     display: none;
