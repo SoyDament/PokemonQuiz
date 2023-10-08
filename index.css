@@ -1,66 +1,96 @@
+/* Estilos para el cuerpo de la página */
 body {
+    background-color: #f0f0f0;
+    /* Color de fondo */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
     background-image: url('assets/Images/Background_index.jpg');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: hidden;
+
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
 
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.carousel-container {
+/* Estilo para centrar el carrusel verticalmente */
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    height: 102.5vh;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 925px;
 }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    width: 300px;
+/* Estilo para el encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Cambia el color de fondo del encabezado según tus preferencias */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     text-align: center;
-    margin: 0 10px;
-    /* Espacio entre slides */
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+
+    /* Asegura que el encabezado esté en la parte superior */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #f0f0f0;
+    ;
+    /* Color del texto del header */
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+    color: #f0f0f0;
+    /* Color del texto del footer */
+}
+
+
+
+/* Estilos para el carrusel */
+#carousel-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo semitransparente para el carrusel */
+    border-radius: 10px;
     overflow: hidden;
 }
 
-.slide img {
-    max-width: 100%;
-    height: auto;
-}
-
-.caption {
+.carousel-caption {
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
+    /* Fondo semitransparente para la leyenda */
+    color: #fff;
+    /* Color de texto de la leyenda */
 }
 
-.caption h2 {
-    margin: 0;
-    font-size: 18px;
-}
-
-.caption p {
-    margin: 0;
-    font-size: 14px;
+/* Estilo para centrar el carrusel */
+#carouselExampleDark {
+    margin-top: auto;
+    /* Centrar en la parte superior */
+    margin-bottom: auto;
+    /* Centrar en la parte inferior */
 }
