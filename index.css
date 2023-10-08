@@ -1,8 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    background-image: url('assets/Images/Background_index.jpg');
+    background-size: contain;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
 .carousel-container {
-    display: block;
-    width: 600px;
-    margin: 0 auto;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -11,25 +34,33 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel img {
-    width: 600px;
-    height: 424px;
+.slide {
+    width: 300px;
+    text-align: center;
+    margin: 0 10px;
+    /* Espacio entre slides */
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+.slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
-    cursor: pointer;
 }
 
-.prev {
-    left: 0;
+.caption h2 {
+    margin: 0;
+    font-size: 18px;
 }
 
-.next {
-    right: 0;
+.caption p {
+    margin: 0;
+    font-size: 14px;
 }

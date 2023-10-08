@@ -1,4 +1,5 @@
 const carousel = document.querySelector(".carousel");
+const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 let currentIndex = 0;
@@ -16,7 +17,7 @@ prevButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-    if (currentIndex < 3) {
+    if (currentIndex < slides.length - 1) {
         currentIndex++;
         showSlide(currentIndex);
     }
@@ -24,7 +25,7 @@ nextButton.addEventListener("click", () => {
 
 // Auto-avance (opcional)
 setInterval(() => {
-    if (currentIndex < 3) {
+    if (currentIndex < slides.length - 1) {
         currentIndex++;
         showSlide(currentIndex);
     } else {
