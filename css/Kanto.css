@@ -59,7 +59,9 @@ main {
 
 #pokemon-image {
     width: 200px;
+    /* Ancho deseado */
     height: auto;
+    /* Mantener la proporción original */
     filter: brightness(0%);
     max-width: 100%;
 }
@@ -101,36 +103,6 @@ main {
 }
 
 /* CSS para controlar la animación de entrada y salida del mensaje */
-#response-message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: white;
-    opacity: 0;
-    z-index: 999;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Nueva clase para mostrar el mensaje */
-.show-message {
-    opacity: 1 !important;
-    background-color: rgba(0, 0, 0, 0.7);
-    pointer-events: auto !important;
-}
-
-#response-message.out {
-    opacity: 0;
-    pointer-events: none;
-}
-
 #response-message-inline {
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
@@ -145,18 +117,6 @@ main {
 #response-message-inline.show-message {
     display: block;
     opacity: 1;
-}
-
-/* Establecer las reglas CSS para las clases 'in' y 'out' */
-.in {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.out {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    pointer-events: none;
 }
 
 @keyframes fadeOut {
@@ -188,8 +148,6 @@ main {
     #pokemon-container {
         width: 100%;
         max-width: 400px;
-        /* Mantén el ancho máximo deseado */
         height: auto;
-        /* Ajusta la altura automáticamente según el contenido */
     }
 }

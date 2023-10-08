@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function getRandomPokemon() {
         const pokemonId = await getRandomPokemonId();
-        const gifUrl = `assets/animated/${String(pokemonId).padStart(3, '0')}.gif`; // Utiliza el ID con ceros iniciales
+        const pngUrl = `assets/png/${String(pokemonId).padStart(3, '0')}.png`; // Utiliza la extensión .png
         pokemonName = await getPokemonData(pokemonId); // Obtén el nombre del Pokémon
-        return gifUrl;
+        return pngUrl;
     }
 
     async function getAllFirstGenPokemonNames() {
@@ -70,13 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         revealPokemon();
                     } else {
                         showResponseMessage("¡Incorrecto! Intenta de nuevo.", false);
-                        isAnimating = false; // Restablecer la animación a false si la respuesta es incorrecta
                     }
                 }
             });
-
         });
     }
+
 
     function capitalizeFirstLetter(string) {
         if (typeof string === 'string') {
@@ -85,25 +84,17 @@ document.addEventListener("DOMContentLoaded", function () {
             return ''; // O devuelve una cadena vacía o maneja el caso de error de otra manera
         }
     }
+
     function showResponseMessage(message, isCorrect) {
         const responseMessageInline = document.getElementById("response-message-inline");
-        const pokemonImage = document.getElementById("pokemon-image");
 
         responseMessageInline.textContent = message;
 
         if (isCorrect) {
             responseMessageInline.style.backgroundColor = "#4CAF50"; // Color verde para respuesta correcta
-            revealPokemon(pokemonImage);
+            revealPokemon();
         } else {
             responseMessageInline.style.backgroundColor = "#FF5722"; // Color rojo para respuesta incorrecta
-
-            // Agregar la clase de sacudida a la imagen del Pokémon en caso de respuesta incorrecta
-            pokemonImage.classList.add("shake");
-
-            // Quitar la clase de sacudida después de un tiempo
-            setTimeout(() => {
-                pokemonImage.classList.remove("shake");
-            }, 500); // Duración de la animación en milisegundos (0.5 segundos en este caso)
         }
 
         // Mostrar el mensaje en línea
@@ -115,20 +106,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1500); // Duración de la animación (en milisegundos)
     }
 
-
-
-
     function revealPokemon() {
         const pokemonImage = document.getElementById("pokemon-image");
         pokemonImage.style.filter = "brightness(100%)"; // Hacer que la imagen del Pokémon sea completamente visible
 
+        // Obtener el ID del Pokémon nuevamente
+        const pokemonId = getRandomPokemonId();
+
         // Retrasar la restauración del brillo después de un tiempo (por ejemplo, 2 segundos)
         setTimeout(() => {
-            pokemonImage.style.filter = "brightness(0%)"; // Hacer que la imagen del Pokémon esté sin brillo
-            isAnimating = false; // Marcar como animación completada
-            startGame(); // Iniciar un nuevo juego después de volver a oscurecer la imagen
-        }, 2000); // Duración en milisegundos (2 segundos en este caso)
+            // Aplica la clase 'revealed' para iniciar la animación de brillo
+            pokemonImage.classList.add("revealed");
+
+            // Restablece el brillo a 0% después de la animación
+            setTimeout(() => {
+                pokemonImage.style.filter = "brightness(0%)";
+                const gifUrl = `assets/gif/${String(pokemonId).padStart(3, '0')}.gif`;
+                pokemonImage.src = gifUrl;
+                // Elimina la clase 'revealed' después de restablecer el brillo
+                pokemonImage.classList.remove("revealed");
+
+                isAnimating = false; // Marcar como animación completada
+                startGame(); // Iniciar un nuevo juego después de volver a oscurecer la imagen
+            }, 2000); // Duración en milisegundos (2 segundos en este caso)
+        }, 1000); // Retraso en milisegundos antes de aplicar la animación (1 segundo en este caso)
     }
+
 
     async function startGame() {
         const pokemonImage = document.getElementById("pokemon-image");
