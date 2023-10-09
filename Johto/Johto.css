@@ -1,6 +1,6 @@
 body {
-    background-image: url('../assets/Images/1600x1000-px-ishmam-Mega-Tyranitar-pokemon-Tyranitar-1348671-wallhere.com.jpg');
-    background-color: #000;
+    background-color: (34, 139, 34);
+    background-image: url('../assets/Images/pokemon-video-games-pixel-art-2124023-wallhere.com.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -18,8 +18,8 @@ h1 {
 
 header,
 footer {
-    background-color: rgba(255, 165, 0, 0.5);
-    padding: 10px 0;
+    background-color: rgb(165, 206, 133);
+    padding: 19px 0;
     text-align: center;
 }
 
@@ -42,7 +42,7 @@ main {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(181, 181, 181, 0.1);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -85,7 +85,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(17, 184, 0, 0.5);
+    background-color: rgb(0, 146, 0, 0.6);
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -93,9 +93,12 @@ main {
 }
 
 #options-list li:hover {
-    background-color: rgb(136, 220, 128);
+    background-color: rgb(0, 146, 0);
+    color: #fff;
+
 }
 
+/* CSS para controlar la animación de entrada y salida del mensaje */
 #response-message-inline {
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
@@ -112,18 +115,21 @@ main {
     opacity: 1;
 }
 
+/* Agrega un estilo para reducir el espacio en blanco después del encabezado en dispositivos móviles */
 @media (max-width: 767px) {
     header {
         margin-bottom: 20px;
     }
 }
 
+/* Ajusta el contenedor principal para dispositivos móviles */
 @media (max-width: 767px) {
     main {
         padding: 20px;
     }
 }
 
+/* Ajusta el contenedor del juego para dispositivos móviles */
 @media (max-width: 767px) {
     #pokemon-container {
         width: 100%;
@@ -132,21 +138,11 @@ main {
     }
 }
 
-@keyframes reveal {
-    0% {
-        filter: brightness(0%);
-    }
-
-    100% {
-        filter: brightness(100%);
-    }
-}
-
 /* Estilo para el botón "Home" */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: rgb(75, 156, 10, 0.8);
     /* Color de fondo del botón */
     color: #fff;
     /* Color del texto del botón */
@@ -156,8 +152,17 @@ main {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: rgb(75, 156, 10, 0.4);
     /* Cambia el color de fondo al pasar el cursor sobre el botón */
 }
 
-/* Otros estilos CSS para el botón si es necesario */
+/* Define la animación de revelación */
+@keyframes reveal {
+    0% {
+        filter: brightness(0%);
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}

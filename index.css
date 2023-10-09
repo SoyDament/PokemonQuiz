@@ -85,6 +85,8 @@ p {
     /* Fondo semitransparente para el carrusel */
     border-radius: 10px;
     overflow: hidden;
+    max-width: 100%;
+    height: auto;
 }
 
 .carousel-caption {
