@@ -10,9 +10,16 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-y: hidden;
+    font-size: 16px;
 
 }
 
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        /* Ajustar el tamaño de fuente para pantallas más grandes */
+    }
+}
 
 /* Estilo para centrar el carrusel verticalmente */
 .container {
