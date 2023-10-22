@@ -15,7 +15,10 @@
     </header>
     <main>
         <a href="../index.html" class="btn">Home</a>
-
+        <div id="loading-screen">
+            <img src="../assets/Images/loading.gif" alt="Cargando..." />
+            <p>Cargando el juego, por favor espera.</p>
+        </div>
         <div id="pokemon-container">
             <div id="pokemon-image-container">
                 <img id="pokemon-image" src="" alt="Pokémon Image" class="revealed" />
@@ -33,7 +36,13 @@
         <p>&copy; 2023 TuNombre</p>
     </footer>
     <script src="Kanto.js"></script>
-
+    <script>
+        // JavaScript para ocultar el loading-screen después de cargar los recursos
+        window.addEventListener("load", function() {
+            var loadingScreen = document.getElementById("loading-screen");
+            loadingScreen.style.display = "none";
+        });
+    </script>
 </body>
 
 </html>
