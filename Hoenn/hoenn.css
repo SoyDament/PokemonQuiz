@@ -1,0 +1,168 @@
+body {
+    background-color: (34, 139, 34);
+    background-image: url('../assets/Images/Hoenn.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+header,
+footer {
+    background-color: rgb(165, 206, 133);
+    padding: 19px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#pokemon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(181, 181, 181, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#pokemon-image-container {
+    margin-bottom: 20px;
+}
+
+#pokemon-image {
+    width: 200px;
+    height: auto;
+    filter: brightness(0%);
+    max-width: 100%;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#options-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+}
+
+#options-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 146, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#options-list li:hover {
+    background-color: rgb(0, 146, 0);
+    color: #fff;
+
+}
+
+/* CSS para controlar la animación de entrada y salida del mensaje */
+#response-message-inline {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#response-message-inline.show-message {
+    display: block;
+    opacity: 1;
+}
+
+/* Agrega un estilo para reducir el espacio en blanco después del encabezado en dispositivos móviles */
+@media (max-width: 767px) {
+    header {
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajusta el contenedor principal para dispositivos móviles */
+@media (max-width: 767px) {
+    main {
+        padding: 20px;
+    }
+}
+
+/* Ajusta el contenedor del juego para dispositivos móviles */
+@media (max-width: 767px) {
+    #pokemon-container {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+/* Estilo para el botón "Home" */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(75, 156, 10, 0.8);
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(75, 156, 10, 0.4);
+    /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+/* Define la animación de revelación */
+@keyframes reveal {
+    0% {
+        filter: brightness(0%);
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}

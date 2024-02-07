@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Pokémon</title>
+    <link rel="stylesheet" href="Kanto.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>¡Adivina el Pokémon!</h1>
+    </header>
+
+    <main>
+        <a href="../index.html" class="btn">Home</a>
+
+        <div id="pokemon-container">
+            <div id="pokemon-image-container">
+                <img id="pokemon-image" src="" alt="Pokémon Image" class="revealed" />
+            </div>
+
+            <div id="options-container">
+                <ul id="options-list"></ul>
+                <div id="response-message" class="out"></div>
+                <div id="response-message-inline" class="out"></div>
+                <!-- Nuevo elemento de mensaje -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; PokemonQ - Dament</p>
+    </footer>
+
+    <script defer src="Kanto.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Pokémon - Segunda Generación</title>
+    <link rel="stylesheet" href="../Johto/Johto.css">
+</head>
+
+<body>
+    <header>
+        <h1>¡Adivina el Pokémon!</h1>
+    </header>
+    <main>
+        <a href="../index.html" class="btn">Home</a>
+        <div id="loading-screen">
+            <img src="../assets/Images/loading.gif" alt="Cargando..." />
+            <p>Cargando el juego, por favor espera.</p>
+        </div>
+        <div id="pokemon-container">
+            <div id="pokemon-image-container">
+                <img id="pokemon-image" src="" alt="Imagen del Pokémon" class="revealed" />
+            </div>
+            <div id="options-container">
+                <ul id="options-list"></ul>
+                <div id="response-message" class="out"></div>
+                <div id="response-message-inline" class="out"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 TuNombre</p>
+    </footer>
+    <script src="../Johto/Johto.js"></script>
+    <script>
+        // JavaScript para ocultar el loading-screen después de cargar los recursos
+        window.addEventListener("load", function() {
+            var loadingScreen = document.getElementById("loading-screen");
+            loadingScreen.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
