@@ -68,6 +68,7 @@ p {
 @media (max-width: 767px) {
     #carousel-container {
         border-radius: 0; /* Sin bordes redondeados en dispositivos móviles */
+        width: 100%; /* Ocupa todo el ancho disponible */
     }
     
     .carousel-caption {
