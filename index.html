@@ -1,72 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Reconoces a este Pokémon?</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="index.css"> <!-- Agrega tu archivo CSS personalizado -->
-
+    <link rel="stylesheet" href="index.css">
+    <title>Página de Inicio</title>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <!-- Contenido del encabezado -->
-            <h1>¡Diversión Pokémon sin fin!</h1>
-        </header>
-        <div id="carousel-container" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="10000">
-                    <img src="assets/Images/Mewtwo.jpg" class="d-block w-100" alt="Slide 1">
-                    <div class="carousel-caption">
-                        <h5>Kanto: Donde Todo Comenzó</h5>
-                        <p>Kanto, la región donde todo comenzó, te desafía a enfrentarte a sus Pokémon icónicos.
-                            ¿Podrás identificarlos a todos y responder la pregunta clave: "¿Quién es ese Pokémon?"
-                            Demuestra que eres un verdadero Maestro Pokémon y desvela los secretos de Kanto.</p>
-                        <a href="Kanto\Kanto.html" class="btn btn-primary">Ir a explorar</a>
-                    </div>
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img src="assets/Images/Lugia.jpg" class="d-block w-100" alt="Slide 2">
-                    <div class="carousel-caption">
-                        <h5>Johto: Donde la Aventura Continúa</h5>
-                        <p>Johto es una tierra de continuas sorpresas y descubrimientos. En '¿Quién es ese
-                            Pokémon?', te enfrentarás a los Pokémon de esta región. ¿Podrás adivinar quiénes son?
-                            ¡Es hora de aventurarse en Johto!</p>
-                        <a href="Johto\Johto.html" class="btn btn-primary">Ir a explorar</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/Images/Rayquaza.jpg" class="d-block w-100" alt="Slide 3">
-                    <div class="carousel-caption">
-                        <h5>Hoenn: Nuevos Horizontes por Descubrir</h5>
-                        <p>Hoenn es famosa por sus desafíos y gimnasios. En '¿Quién es ese Pokémon?', te enfrentarás
-                            a los Pokémon más intrigantes de esta región. ¿Podrás desvelar sus nombres y convertirte
-                            en un verdadero Entrenador Pokémon?</p>
-                        <a href="Hoenn\hoenn.html" class="btn btn-primary">Ir a explorar</a>
-                    </div>
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <h2>Selecciona una Versión:</h2>
+        
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="assets/png/151.png" alt="Versión 1">
+                <div class="card-body">
+                    <h4 class="card-title">Kanto: Donde Todo Comenzó</h4>
+                    <p class="card-text">Kanto, la región donde todo comenzó, te desafía a enfrentarte a sus Pokémon icónicos. ¿Podrás identificarlos a todos y responder la pregunta clave: "¿Quién es ese Pokémon?" Demuestra que eres un verdadero Maestro Pokémon y desvela los secretos de Kanto.</p>
+                    <a href="Kanto\Kanto.html" class="btn btn-primary">Ir a explorar</a>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-target="#carousel-container" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-target="#carousel-container" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-        <footer>
-            <!-- Contenido del pie de página -->
-            <p>¡Gracias por ser parte de nuestra comunidad Pokémon!</p>
-        </footer>
-    </div>
-</body>
 
+            <div class="card">
+                <img class="card-img-top" src="assets/png/251.png" alt="Versión 2">
+                <div class="card-body">
+                    <h4 class="card-title">Johto: Donde la Aventura Continúa</h4>
+                    <p class="card-text">Kanto, la región donde todo comenzó, te desafía a enfrentarte a sus Pokémon icónicos. ¿Podrás identificarlos a todos y responder la pregunta clave: "¿Quién es ese Pokémon?" Demuestra que eres un verdadero Maestro Pokémon y desvela los secretos de Kanto.</p>
+                    <a href="Johto\Johto.html" class="btn btn-primary">Ir a explorar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="assets/png/385.png" alt="Versión 3">
+                <div class="card-body">
+                    <h4 class="card-title">Hoenn: Nuevos Horizontes por Descubrir</h4>
+                    <p class="card-text">Hoenn es famosa por sus desafíos y gimnasios. En '¿Quién es ese Pokémon?', te enfrentarás a los Pokémon más intrigantes de esta región. ¿Podrás desvelar sus nombres y convertirte en un verdadero Entrenador Pokémon?</p>
+                    <a href="Hoenn\hoenn.html" class="btn btn-primary">Ir a explorar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
 </html>
