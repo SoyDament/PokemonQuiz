@@ -3,7 +3,7 @@ body {
     background-image: url('assets/Images/pattern.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment:scroll;
+    background-attachment:initial;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -94,66 +94,13 @@ h2 {
     background-color: #45a049;
 }
 
-.social-buttons {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.social-buttons a {
-    margin: 0 10px;
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.social-buttons img{
-    width: 30px;
-    height: auto;
-    border-radius: 50%;
-    vertical-align: middle; /* Agregamos esta línea */
-
-}
-
-/* Agregamos estilos de sombra y animación cuando el mouse está sobre el botón */
-.social-buttons a:hover {
-    transform: scale(1.4); /* Cambia el tamaño al hacer hover */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra */
-    background-color: transparent; /* Hacemos el fondo transparente al hacer hover */
-}
-
-#info-button {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: transparent;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    margin-right: 5px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: none; /* Quitar el borde del botón */
-}
-
-#info-button img {
-    width: 30px;
-    height: auto;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-left: -6.2px;
-    margin-top: -1px;
-}
-
-#info-button:hover {
-    transform: scale(1.4); /* Cambia el tamaño al hacer hover */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
-}
 
 /* Estilos generales para dispositivos móviles */
 @media (max-width: 767px) {
 
+    body{
+        background-attachment:scroll;
+    }
     main {
         padding: 20px;
     }
