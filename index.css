@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     background-color: #f0f0f0;
-    background-image: url('assets/Images/All.png'); /* Corregida la ruta de la imagen */
+    background-image: url('gassets/Images/All.png'); /* Corregida la ruta de la imagen */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -64,6 +64,16 @@ p {
     margin: 0;
     color: #f0f0f0;
 }
+/* Estilos del carrusel para dispositivos móviles */
+@media (max-width: 767px) {
+    #carousel-container {
+        border-radius: 0; /* Sin bordes redondeados en dispositivos móviles */
+    }
+    
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para mejor legibilidad en dispositivos móviles */
+    }
+}
 
 /* Estilos del carrusel */
 #carousel-container {
@@ -71,21 +81,12 @@ p {
     border-radius: 10px;
     overflow: hidden;
     max-width: 100%;
-    height: auto;
+    margin: 0 auto; /* Centra el carrusel en pantallas más grandes */
 }
 
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-}
-
-/* Estilos del carrusel para dispositivos móviles */
-@media (max-width: 767px) {
+/* Ajuste adicional para pantallas más grandes */
+@media (min-width: 768px) {
     #carousel-container {
-        border-radius: 0; /* Sin bordes redondeados en dispositivos móviles */
-    }
-
-    .carousel-caption {
-        background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para mejor legibilidad en dispositivos móviles */
+        margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
     }
 }
