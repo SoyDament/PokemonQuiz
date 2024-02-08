@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     background-color: #f0f0f0;
-    background-image: url('../assets/Images/All.png'); /* Corregida la ruta de la imagen */
+    background-image: url('assets/Images/All.png'); /* Corregida la ruta de la imagen */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
