@@ -1,6 +1,7 @@
 /* Estilos generales */
 body {
     background-color: #f0f0f0;
+    background-image: url('../assets/Images/All.png'); /* Corregida la ruta de la imagen */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -83,7 +84,7 @@ p {
     #carousel-container {
         border-radius: 0; /* Sin bordes redondeados en dispositivos móviles */
     }
-    
+
     .carousel-caption {
         background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para mejor legibilidad en dispositivos móviles */
     }
