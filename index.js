@@ -1,27 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const pokeImage = document.getElementById("pokemon-image");
-    let attempts = 0;
+    const cardDeck = document.querySelector('.card-deck');
+    let scrollPosition = 0;
 
-    function startGame(generation) {
-        attempts = 0;
-        const optionsList = document.getElementById("options-list");
-        optionsList.classList.remove("disabled");
+    window.addEventListener('scroll', function () {
+        const newScrollPosition = window.scrollY;
 
-        // Restaurar la visibilidad y la animación de la imagen
-        pokeImage.style.display = 'block';
-        pokeImage.style.animation = "reveal 2s ease-in-out";
+        // Calcular la distancia que se ha desplazado
+        const scrollDistance = newScrollPosition - scrollPosition;
 
-        setTimeout(() => {
-            getRandomPokemon(generation, (data) => {
-                pokeImage.src = data.pngUrl;
-                generateOptions(data.pokemonName, (options) => {
-                    displayOptions(options, data.pokemonName);
-                    // Quitar la animación después de mostrar las opciones
-                    pokeImage.style.animation = "none";
-                });
-            });
-        }, 2000);
-    }
+        // Aplicar una transformación a las tarjetas basada en la distancia de desplazamiento
+        cardDeck.style.transform = `translateY(${scrollDistance}px)`;
 
-    // Resto del código...
+        // Actualizar la posición de desplazamiento para el siguiente evento
+        scrollPosition = newScrollPosition;
+    });
 });

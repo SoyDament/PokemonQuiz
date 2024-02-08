@@ -99,16 +99,24 @@ h2 {
 
     main {
         padding: 20px;
+        overflow-y: scroll; /* Permitir el desplazamiento vertical en el contenedor principal */
     }
+
     .card {
         width: 100%;
         margin-right: 0px;
         margin-left: 0px;
         margin-bottom: 25px;
+        transition: transform 0.3s ease-in-out; /* Agregar una transición para suavizar el movimiento */
     }
+
     .card-deck {
         margin-top: 20 px; /* O ajusta según tus necesidades */
         flex-direction: column;
         align-items: center; /* Alinea las tarjetas al centro en el eje transversal */
+    }
+
+    .card:last-child {
+        margin-bottom: 100px; /* Agregar espacio al final para que las tarjetas no se oculten detrás del footer */
     }
 }
