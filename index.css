@@ -12,19 +12,13 @@ body {
 }
 
 
-footer {
-    padding: 10px 0;
-    text-align: center;
-}
-
-
 main {
-    display:inline-block;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    padding: 15px;
+    padding: 5px;
 }
 
 h2 {
@@ -57,15 +51,14 @@ h2 {
 }
 
 .card-img-top {
-    width: 50%;
+    width: 150px;
     height:auto;
     margin: 10px;
 }
-
 .card-body {
-    padding: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
 }
-
 .card-title {
     font-size: 16px;
     margin-bottom: 5px;
@@ -74,6 +67,15 @@ h2 {
 .card-text {
     font-size: 16px;
     margin-bottom: 20px;
+}
+/* Mantén la disposición horizontal en pantallas más grandes */
+.card-deck {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.card:last-child {
+    margin-right: 0;
 }
 
 .btn {
@@ -97,10 +99,16 @@ h2 {
 
     main {
         padding: 20px;
-        padding: 30px;
     }
-
+    .card {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 25px;
+    }
     .card-deck {
-        margin-top: 10 px; /* O ajusta según tus necesidades */
+        margin-top: 20 px; /* O ajusta según tus necesidades */
+        flex-direction: column;
+        align-items: center; /* Alinea las tarjetas al centro en el eje transversal */
     }
 }
