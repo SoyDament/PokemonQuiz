@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardDeck = document.querySelector('.card-deck');
     let scrollPosition = 0;
 
+    cardDeck.style.overflowY = 'auto'; // Habilitar la barra de desplazamiento solo para las tarjetas
+
     window.addEventListener('scroll', function () {
         const newScrollPosition = window.scrollY;
 
